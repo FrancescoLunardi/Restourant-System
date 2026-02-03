@@ -34,4 +34,4 @@ Date getTodayDate()
     __int32 y = date->tm_year;
 
     return {d, m, y};
-}
+};
