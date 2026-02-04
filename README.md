@@ -1,6 +1,7 @@
-#Restaurant Manage Reservation System
+# Restaurant Manage Reservation System
 
-##This is a simple mange system for restaurant.
+## This is a simple mange system for restaurant.
+
 I'm a begginner developer.
 
 **All Rights Are Served**
