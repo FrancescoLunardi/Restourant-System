@@ -13,23 +13,20 @@ class Reservation
         std::string name;
         std::string surname;
         std::string phone_number;
-        Table       table_reserved;
         int         number_sits;
+        Table       table_reserved;
 
     public:
         /* Inizialize */
-        Reservation(
-            /* Today Date */
-            __int32 date1_d, __int32 date1_m, __int32 date1_y,
-            /* Reservation Date */
-            __int32 date2_d, __int32 date2_m, __int32 date2_y,
-            /* User Data*/
-            std::string name, std::string surname, std::string phone_number,
+        Reservation();
 
-        )
+        /* Methods */
+        void add_change_reservation_date(__int32 d, __int32 m, __int32 y);
+        void add_change_name_surname(std::string name, std::string surname);
+        void add_change_phone_number(std::string number);
+        void add_change_sit_n(int n_sits);
+        void reserve_table();
 };
-
-
 
 
 #endif

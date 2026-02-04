@@ -17,7 +17,7 @@ std::string Date::getDateString()
         std::to_string(this->m) + "/" + 
         std::to_string(this->y)
     };
-};
+}
 
 
 /* ------ GET DATE OF TODAY (function) ------ */
