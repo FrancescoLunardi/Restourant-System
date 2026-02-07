@@ -1,7 +1,6 @@
 #include "main.h"
 
 
-
 void Table::add_change_n(int new_n)
 {
     bool n_table_already_existing {false};
@@ -39,7 +38,7 @@ void Table::add_change_n_max_min_sits(int n_min, int n_max)
 
 void Table::add_reservation(const Reservation& reservation)
 {
-    this->reservation_list.append(reservation);
+    this->reservation_list.push_back(reservation);
 
     /* Print successfully message */
     std::cout << "The reservation is added at reservation_list of table!\n";
@@ -60,4 +59,10 @@ void Table::remove_reservation(const Reservation& reservation)
 
     /* Print error message */
     std::cout << "Error! The riservation isn't in the list!\n";
+}
+
+
+Table assign_table( Date date_reservation, std::string name, std::string surname, std::string phone_number)
+{
+
 }

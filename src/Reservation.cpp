@@ -14,7 +14,7 @@ Reservation::Reservation()
 
 /* Methods */
 
-void Reservation::add_change_reservation_date(__int32 d, __int32 m, __int32 y)
+void Reservation::add_change_reservation_date(int d, int m, int y)
 {
     this->date_reservation = Date(d, m, y);
 
@@ -80,7 +80,7 @@ void Reservation::add_change_sit_n(int n_sits)
 
 void Reservation::reserve_table()
 {
-    this->reserve_table = assign_table(
+    this->table_reserved = assign_table(
         this->date_reservation, 
         this->name, 
         this->surname, 

@@ -29,9 +29,9 @@ Date getTodayDate()
 
     /* Get date from library*/
     
-    __int32 d = date->tm_mday;
-    __int32 m = date->tm_mon;
-    __int32 y = date->tm_year;
+    int d = date->tm_mday;
+    int m = date->tm_mon;
+    int y = date->tm_year;
 
     return {d, m, y};
 };
