@@ -1,8 +1,9 @@
-#include "main.h"
+#include "Date.h"
 
 
 /* ------- CLASS ------*/
 
+Date::Date():d(0), m(0), y(0) {}
 Date::Date(int d, int m, int y)
 {
     this->d = d;

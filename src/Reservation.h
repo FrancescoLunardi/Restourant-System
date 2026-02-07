@@ -1,7 +1,8 @@
 #ifndef RESERVATION_H
 #define RESERVATION_H
 
-#include "main.h"
+#include "Date.h"
+#include "Reservation.h"
 
 /* ------ RESERVATION CLASS ------*/
 

@@ -14,6 +14,7 @@ class Date
         int y; // Year
 
         // Inizialize
+        Date();
         Date (int d, int m, int y);
         
         // Print date function

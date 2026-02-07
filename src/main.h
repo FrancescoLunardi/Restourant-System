@@ -1,12 +1,12 @@
-/* ---- FILES ".h" ---- */
+#ifndef MAIN_H
+#define MAIN_H
 
-#include "Date.h"
-#include "Reservation.h"
-#include "Table.h"
-
-/* ---- LIBRARYS ---- */
 
 #include <iostream>
 #include <string>
 #include <vector>
 #include <ctime>
+#include <cctype>
+
+
+#endif

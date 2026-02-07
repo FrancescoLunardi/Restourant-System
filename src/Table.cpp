@@ -1,10 +1,15 @@
-#include "main.h"
+#include "Table.h"
+#include "Date.h"
+#include "Reservation.h"
+
+
+std::vector<Table> table_list = {};
 
 
 void Table::add_change_n(int new_n)
 {
     bool n_table_already_existing {false};
-    for (Table t : table_list) if (t.get_n() == new_n) n_table_already_existing = true;
+    for (const Table& t : table_list) if (t.get_n() == new_n) n_table_already_existing = true;
 
     if (!n_table_already_existing)
     {
@@ -46,8 +51,8 @@ void Table::add_reservation(const Reservation& reservation)
 
 void Table::remove_reservation(const Reservation& reservation)
 {
-    for (int r {}; r < this->reservation_list.size(); r++)
-        if (this->reservation_list[r] == reservation)
+    for (size_t r {}; r < this->reservation_list.size(); r++)
+        if (this->reservation_list[r] == &reservation)
         {
             this->reservation_list.erase(this->reservation_list.begin() + r);
 
@@ -64,5 +69,5 @@ void Table::remove_reservation(const Reservation& reservation)
 
 Table assign_table( Date date_reservation, std::string name, std::string surname, std::string phone_number)
 {
-
+    // Serch a free table for n. of people and for houar
 }
