@@ -9,13 +9,13 @@
 class Reservation
 {
     private:
-        Date        date;
-        Date        date_reservation;
-        std::string name;
-        std::string surname;
-        std::string phone_number;
-        int         number_sits;
-        Table       table_reserved;
+        Date date;                  // Date the reservation was added
+        Date date_reservation;      // Date of use
+        std::string name;           // Name of user
+        std::string surname;        // Surname of user
+        std::string phone_number;   // Phone number of user
+        int number_sits;            // Number of sits reserved
+        Table table_reserved;
 
     public:
         /* Inizialize */

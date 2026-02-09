@@ -1,9 +1,9 @@
 #include "Reservation.h"
 
-/* Inizialize */
+/* Inizializing data */
 Reservation::Reservation()
 {
-    this->date = getTodayDate();
+    this->date = getTodayDate(); // Automatically assign today's date
     this->date_reservation = Date(0, 0, 0);
     this->name = "";
     this->surname = "";
@@ -22,31 +22,29 @@ void Reservation::add_change_reservation_date(int d, int m, int y)
     std::cout << "The date is change/added successfully!\n";
 }
 
+
 void Reservation::add_change_name_surname(std::string name, std::string surname)
 {
     /* Check validation of data */
     if (name.length() < 4 || surname.length() < 4)
     {
         std::cout << "Error! Name/surname is/are uncorrect.\n";
-        return; // Exit from method
+        return;
     }
 
-    
+    /* Change data */
     this->name = name;
     this->surname = surname;
 
     /* Print the successfully message */
-    if (this->name.length() < 1 || this->surname.length() < 1)
-        std::cout << "Data is added successfully!\n";
-    else 
-        std::cout << "Data is changing successfully!\n";
+    std::cout << "Data is added/change successfully!\n";
 }
+
 
 void Reservation::add_change_phone_number(std::string number)
 {
-    /* Check number */
+    /* Check prefix */
     bool correctly_number {true};
-    
     if (number.length() < 9)             correctly_number = false;
     if (number[0] != '+')                correctly_number = false;
     if (number[1] < 0 || number[1] > 9)  correctly_number = false;
