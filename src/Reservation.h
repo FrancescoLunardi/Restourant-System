@@ -2,32 +2,31 @@
 #define RESERVATION_H
 
 #include "Date.h"
-#include "Reservation.h"
-
-/* ------ RESERVATION CLASS ------*/
+#include "main.h"
 
 class Reservation
 {
-    private:
-        Date date;                  // Date the reservation was added
-        Date date_reservation;      // Date of use
-        std::string name;           // Name of user
-        std::string surname;        // Surname of user
-        std::string phone_number;   // Phone number of user
-        int number_sits;            // Number of sits reserved
-        Table table_reserved;
+private:
+    Date date;                // Date when reservation was created
+    Date date_reservation;    // Date of reservation usage
+    std::string name;
+    std::string surname;
+    std::string phone_number;
+    int number_sits;
+    int table_reserved_id;    // -1 = not assigned
 
-    public:
-        /* Inizialize */
-        Reservation();
+public:
+    Reservation();
 
-        /* Methods */
-        void add_change_reservation_date(int d, int m, int y);
-        void add_change_name_surname(std::string name, std::string surname);
-        void add_change_phone_number(std::string number);
-        void add_change_sit_n(int n_sits);
-        void reserve_table();
+    void add_change_reservation_date(int d, int m, int y);
+    void add_change_name_surname(std::string name, std::string surname);
+    void add_change_phone_number(std::string number);
+    void add_change_sit_n(int n_sits);
+
+    void set_table_reserved_id(int table_id);
+    
+    int get_table_reserved_id() const;
+    int get_number_sits() const;
 };
-
 
 #endif

@@ -31,8 +31,8 @@ Date getTodayDate()
     /* Get date from library*/
     
     int d = date->tm_mday;
-    int m = date->tm_mon;
-    int y = date->tm_year;
+    int m = date->tm_mon + 1;     // Add 1 because tm_mon start from 0
+    int y = date->tm_year + 1900; // Add 1900 because tm_year start form 1900
 
     return {d, m, y};
 };

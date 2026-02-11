@@ -44,21 +44,21 @@ void Table::add_change_n_max_min_sits(int n_min, int n_max)
 }
 
 
-void Table::add_reservation(const Reservation& reservation)
+void Table::add_reservation(int reservation_id)
 {
-    this->reservation_list.push_back(reservation);
+    this->reservations_list_id.push_back(reservation_id);
 
     /* Print successfully message */
     std::cout << "The reservation is added at reservation_list of table!\n";
 }
 
 
-void Table::remove_reservation(const Reservation& reservation)
+void Table::remove_reservation(int reservation_id)
 {
-    for (size_t r {}; r < this->reservation_list.size(); r++)
-        if (this->reservation_list[r] == &reservation)
+    for (size_t r {}; r < this->reservations_list_id.size(); r++)
+        if (this->reservations_list_id[r] == reservation_id)
         {
-            this->reservation_list.erase(this->reservation_list.begin() + r);
+            this->reservations_list_id.erase(this->reservations_list_id.begin() + r);
 
             /* Print successfully message */
             std::cout << "The reservation is removed succesfully!\n";
@@ -68,10 +68,4 @@ void Table::remove_reservation(const Reservation& reservation)
 
     /* Print error message */
     std::cout << "Error! The riservation isn't in the list!\n";
-}
-
-
-Table assign_table( Date date_reservation, std::string name, std::string surname, std::string phone_number)
-{
-    // Serch a free table for n. of people and for houar
 }
